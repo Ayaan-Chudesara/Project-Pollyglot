@@ -1,0 +1,64 @@
+<div class="app-container">
+  <!-- Application Header -->
+  <header class="app-header">
+    <!-- Placeholder for PollyGlot Logo (you can replace with a real image or SVG) -->
+    <img src="" alt="PollyGlot Logo" class="logo">
+    PollyGlot
+  </header>
+
+  <!-- Main Translation Card Container -->
+  <div class="translation-card">
+    <!-- Text to Translate Section -->
+    <h2 class="section-title">Text to translate <span role="img" aria-label="pen">✍️</span></h2>
+    <textarea
+      [(ngModel)]="inputText"
+      class="input-textarea"
+      rows="6"
+      placeholder="How are you?"
+    ></textarea>
+
+    <!-- Language Selection Section -->
+    <h2 class="section-title">Select language <span role="img" aria-label="flag">🚩</span></h2>
+    <div class="language-options">
+      <label class="radio-label">
+        <input type="radio" name="language" value="fr" [(ngModel)]="selectedLanguage" class="radio-input">
+        <span class="language-text">French 🇫🇷</span>
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="language" value="es" [(ngModel)]="selectedLanguage" class="radio-input">
+        <span class="language-text">Spanish 🇪🇸</span>
+      </label>
+      <label class="radio-label">
+        <input type="radio" name="language" value="ja" [(ngModel)]="selectedLanguage" class="radio-input">
+        <span class="language-text">Japanese 🇯🇵</span>
+      </label>
+      <!-- Add more language options here as needed -->
+    </div>
+
+    <!-- Translate Button -->
+    <button
+      (click)="onTranslate()"
+      class="translate-button"
+    >
+      Translate
+    </button>
+
+    <!-- Translated Output Area (conditionally displayed) -->
+    <div *ngIf="translatedText" class="translated-output-area">
+      <h3 class="output-title">Translated Text:</h3>
+      <p class="output-text">{{ translatedText }}</p>
+      <!-- Audio Playback Button -->
+      <button
+        (click)="onSpeakTranslatedText()"
+        class="speak-button"
+      >
+        <!-- Speaker Icon -->
+        <svg class="speak-icon" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        </svg>
+        Speak
+      </button>
+    </div>
+  </div>
+</div>
