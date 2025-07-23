@@ -1,8 +1,7 @@
 <div class="app-container">
   <!-- Application Header -->
   <header class="app-header">
-    <!-- Placeholder for PollyGlot Logo (you can replace with a real image or SVG) -->
-    <img src="" alt="PollyGlot Logo" class="logo">
+    <img src="assets/parrot.png" alt="PollyGlot Logo" class="logo" />
     PollyGlot
   </header>
 
@@ -21,18 +20,23 @@
     <h2 class="section-title">Select language <span role="img" aria-label="flag">🚩</span></h2>
     <div class="language-options">
       <label class="radio-label">
-        <input type="radio" name="language" value="fr" [(ngModel)]="selectedLanguage" class="radio-input">
-        <span class="language-text">French 🇫🇷</span>
+        <input type="radio" name="language" value="fr" [(ngModel)]="selectedLanguage" class="radio-input" />
+        <span class="language-text">
+          <img src="assets/fr-flag.png" alt="French Flag" width="20" height="14" /> French
+        </span>
       </label>
       <label class="radio-label">
-        <input type="radio" name="language" value="es" [(ngModel)]="selectedLanguage" class="radio-input">
-        <span class="language-text">Spanish 🇪🇸</span>
+        <input type="radio" name="language" value="es" [(ngModel)]="selectedLanguage" class="radio-input" />
+        <span class="language-text">
+          <img src="assets/sp-flag.png" alt="Spanish Flag" width="20" height="14" /> Spanish
+        </span>
       </label>
       <label class="radio-label">
-        <input type="radio" name="language" value="ja" [(ngModel)]="selectedLanguage" class="radio-input">
-        <span class="language-text">Japanese 🇯🇵</span>
+        <input type="radio" name="language" value="ja" [(ngModel)]="selectedLanguage" class="radio-input" />
+        <span class="language-text">
+          <img src="assets/jpn-flag.png" alt="Japanese Flag" width="20" height="14" /> Japanese
+        </span>
       </label>
-      <!-- Add more language options here as needed -->
     </div>
 
     <!-- Translate Button -->
@@ -43,16 +47,16 @@
       Translate
     </button>
 
-    <!-- Translated Output Area (conditionally displayed) -->
+    <!-- Translated Output Area -->
     <div *ngIf="translatedText" class="translated-output-area">
       <h3 class="output-title">Translated Text:</h3>
       <p class="output-text">{{ translatedText }}</p>
-      <!-- Audio Playback Button -->
+
+      <!-- Speak Button -->
       <button
         (click)="onSpeakTranslatedText()"
         class="speak-button"
       >
-        <!-- Speaker Icon -->
         <svg class="speak-icon" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
           <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
