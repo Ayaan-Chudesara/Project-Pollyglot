@@ -41,7 +41,7 @@ Angular CLI: Install globally with npm install -g @angular/cli.
 
 Hugging Face API Token: You'll need to create a Hugging Face account and generate a new Access Token from your profile settings.
 
-1. Backend Setup
+### 1. Backend Setup
 Clone this repository to your local machine.
 
 Navigate to the pollyglot-backend directory.
@@ -58,7 +58,7 @@ Run the application from your IDE or using the following Maven command:
 
 The backend will start on http://localhost:8080.
 
-2. Frontend Setup
+### 2. Frontend Setup
 Navigate to the pollyglot-frontend directory.
 
 Install the npm dependencies:
